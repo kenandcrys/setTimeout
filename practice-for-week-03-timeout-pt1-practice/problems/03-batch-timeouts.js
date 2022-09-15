@@ -24,12 +24,25 @@ Example:
 
 ***********************************************************************/
 
+
+  // if (!tasks.length) return null
+  // const nextTask = tasks.slice(1)
+  //  const nextDelay = delays.slice(1)
+  //   console.log(`${nextTask[0]} after`, nextDelay[0])
+  //   setTimeout( batchTimeouts, delays, nextTask)
 function batchTimeouts(callbacks, delays) {
-  if (!delays.length) return
-  console.log(`${tasks} after ${delays}`)
- const currentDelay = delays.slice(1) 
+  arrayOfObj = [];
  
- setTimeout( batchTimeouts, currentDelay, callbacks)
+  for(let i = 0; i < delays.length; i++) {
+     
+    const nextTask = callbacks[i]
+    const nextDelay = delays[i]
+    const time1 = setTimeout(nextTask, nextDelay, )
+    arrayOfObj.push(time1);
+  }
+  
+  return arrayOfObj;
+  
 }
 
 const sayHello = () => console.log('hi');
