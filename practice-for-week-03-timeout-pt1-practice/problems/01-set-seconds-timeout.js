@@ -15,7 +15,13 @@ node with the examples below. Use the command
 Examples:
 
 
+setSecondsTimeout(function () {
+  console.log('hello');
+}, 1); // should print 'hello' after 1000 milliseconds
 
+setSecondsTimeout(function () {
+  console.log('world');
+}, 1.4); // should print 'world' after 1400 milliseconds
 
 ***********************************************************************/
 
